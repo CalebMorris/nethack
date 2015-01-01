@@ -10,7 +10,7 @@
 #include "onames.h"
 #include "artifact_names.h"
 #include "decl.h"
-
+#include "you.h"
 
 /*
  * HXxx refers to intrinsic bitfields while in human form.
