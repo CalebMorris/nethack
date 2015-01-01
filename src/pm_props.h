@@ -1,7 +1,7 @@
 #ifndef PM_PROPS_H
 #define PM_PROPS_H
 
-#include "pm.h"
+#include "pm.h" // @TODO Missing file
 
 #define NON_PM          PM_PLAYERMON            /* "not a monster" */
 #define LOW_PM          (NON_PM+1)              /* first monster in mons[] */
