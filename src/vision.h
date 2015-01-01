@@ -2,15 +2,19 @@
 #ifndef VISION_H
 #define VISION_H
 
-#define COULD_SEE 0x1           /* location could be seen, if it were lit */
-#define IN_SIGHT  0x2           /* location can be seen */
-#define TEMP_LIT  0x4           /* location is temporarily lit */
+enum {
+    COULD_SEE = 0x1, /* location could be seen, if it were lit */
+    IN_SIGHT = 0x2, /* location can be seen */
+    TEMP_LIT = 0x4, /* location is temporarily lit */
+};
 
 /*
  * Light source sources
  */
-#define LS_OBJECT 0
-#define LS_MONSTER 1
+enum {
+    LS_OBJECT = 0,
+    LS_MONSTER,
+};
 
 /*
  *  cansee()    - Returns true if the hero can see the location.
@@ -41,7 +45,9 @@
 /*
  *  Circle information
  */
-#define MAX_RADIUS 15   /* this is in points from the source */
+enum {
+    MAX_RADIUS = 15, /* this is in points from the source */
+};
 
 /* Use this macro to get a list of distances of the edges (see vision.c). */
 #define circle_ptr(z) (&circle_data[(int)circle_start[z]])

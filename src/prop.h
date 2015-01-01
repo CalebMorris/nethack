@@ -3,74 +3,76 @@
 #define PROP_H
 
 /*** What the properties are ***/
-#define FIRE_RES                 1
-#define COLD_RES                 2
-#define SLEEP_RES                3
-#define DISINT_RES               4
-#define SHOCK_RES                5
-#define POISON_RES               6
-#define ACID_RES                 7
-#define STONE_RES                8
-/* note: for the first eight properties, MR_xxx == (1 << (xxx_RES - 1)) */
-#define ADORNED                  9
-#define REGENERATION            10
-#define SEARCHING               11
-#define SEE_INVIS               12
-#define INVIS                   13
-#define TELEPORT                14
-#define TELEPORT_CONTROL        15
-#define POLYMORPH               16
-#define POLYMORPH_CONTROL       17
-#define LEVITATION              18
-#define STEALTH                 19
-#define AGGRAVATE_MONSTER       20
-#define CONFLICT                21
-#define PROTECTION              22
-#define PROT_FROM_SHAPE_CHANGERS 23
-#define WARNING                 24
-#define TELEPAT                 25
-#define FAST                    26
-#define STUNNED                 27
-#define CONFUSION               28
-#define SICK                    29
-#define BLINDED                 30
-#define SLEEPING                31
-#define WOUNDED_LEGS            32
-#define STONED                  33
-#define STRANGLED               34
-#define HALLUC                  35
-#define HALLUC_RES              36
-#define FUMBLING                37
-#define JUMPING                 38
-#define WWALKING                39
-#define HUNGER                  40
-#define GLIB                    41
-#define REFLECTING              42
-#define LIFESAVED               43
-#define ANTIMAGIC               44
-#define DISPLACED               45
-#define CLAIRVOYANT             46
-#define VOMITING                47
-#define ENERGY_REGENERATION     48
-#define MAGICAL_BREATHING       49
-#define HALF_SPDAM              50
-#define HALF_PHDAM              51
-#define SICK_RES                52
-#define DRAIN_RES               53
-#define WARN_UNDEAD             54
-#define INVULNERABLE            55
-#define FREE_ACTION             56
-#define SWIMMING                57
-#define SLIMED                  58
-#define FIXED_ABIL              59
-#define FLYING                  60
-#define UNCHANGING              61
-#define PASSES_WALLS            62
-#define SLOW_DIGESTION          63
-#define INFRAVISION             64
-#define WARN_OF_MON             65
-#define DETECT_MONSTERS         66
-#define LAST_PROP               (DETECT_MONSTERS)
+enum {
+    FIRE_RES = 1,
+    COLD_RES,
+    SLEEP_RES,
+    DISINT_RES,
+    SHOCK_RES,
+    POISON_RES,
+    ACID_RES,
+    STONE_RES,
+    /* note: for the first eight properties, MR_xxx == (1 << (xxx_RES - 1)) */
+    ADORNED,
+    REGENERATION,
+    SEARCHING,
+    SEE_INVIS,
+    INVIS,
+    TELEPORT,
+    TELEPORT_CONTROL,
+    POLYMORPH,
+    POLYMORPH_CONTROL,
+    LEVITATION,
+    STEALTH,
+    AGGRAVATE_MONSTER,
+    CONFLICT,
+    PROTECTION,
+    PROT_FROM_SHAPE_CHANGERS,
+    WARNING,
+    TELEPAT,
+    FAST,
+    STUNNED,
+    CONFUSION,
+    SICK,
+    BLINDED,
+    SLEEPING,
+    WOUNDED_LEGS,
+    STONED,
+    STRANGLED,
+    HALLUC,
+    HALLUC_RES,
+    FUMBLING,
+    JUMPING,
+    WWALKING,
+    HUNGER,
+    GLIB,
+    REFLECTING,
+    LIFESAVED,
+    ANTIMAGIC,
+    DISPLACED,
+    CLAIRVOYANT,
+    VOMITING,
+    ENERGY_REGENERATION,
+    MAGICAL_BREATHING,
+    HALF_SPDAM,
+    HALF_PHDAM,
+    SICK_RES,
+    DRAIN_RES,
+    WARN_UNDEAD,
+    INVULNERABLE,
+    FREE_ACTION,
+    SWIMMING,
+    SLIMED,
+    FIXED_ABIL,
+    FLYING,
+    UNCHANGING,
+    PASSES_WALLS,
+    SLOW_DIGESTION,
+    INFRAVISION,
+    WARN_OF_MON,
+    DETECT_MONSTERS,
+    LAST_PROP = (DETECT_MONSTERS),
+};
 
 /*** Where the properties come from ***/
 /* Definitions were moved here from obj.h and you.h */

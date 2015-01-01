@@ -4,14 +4,18 @@
 #ifndef ATTRIB_H
 #define ATTRIB_H
 
-#define A_STR   0
-#define A_INT   1
-#define A_WIS   2
-#define A_DEX   3
-#define A_CON   4
-#define A_CHA   5
+enum {
+    A_STR,
+    A_INT,
+    A_WIS,
+    A_DEX,
+    A_CON,
+    A_CHA,
+};
 
-#define A_MAX   6       /* used in rn2() selection of attrib */
+enum {
+    A_MAX = 6, /* used in rn2() selection of attrib */
+};
 
 #define ABASE(x)        (u.acurr.a[x])
 #define ABON(x)         (u.abon.a[x])

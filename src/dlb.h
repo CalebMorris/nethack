@@ -25,8 +25,9 @@ typedef struct dlb_library {
 } library;
 
 /* library definitions */
-#define DLBFILE "build/nhdat"
-
+enum {
+    DLBFILE = "build/nhdat",
+};
 
 typedef struct dlb_handle {
     FILE *fp;           /* pointer to an external file, use if non-null */

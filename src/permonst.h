@@ -26,7 +26,9 @@ struct attack {
 /*      Max # of attacks for any given monster.
  */
 
-#define NATTK           6
+enum {
+        NATTK = 6,
+};
 
 /*      Weight of a human body
  */
@@ -59,10 +61,12 @@ struct permonst {
 /* the master list of monster types */
 extern struct permonst mons[];
 
-#define VERY_SLOW 3
-#define SLOW_SPEED 9
-#define NORMAL_SPEED 12 /* movement rates */
-#define FAST_SPEED 15
-#define VERY_FAST 24
+enum {
+        VERY_SLOW    = 3,
+        SLOW_SPEED   = 9,
+        NORMAL_SPEED = 12, /* movement rates */
+        FAST_SPEED   = 15,
+        VERY_FAST    = 24,
+};
 
 #endif /* PERMONST_H */
