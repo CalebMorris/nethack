@@ -6,6 +6,8 @@
 
 #include <stdbool.h>
 #include <stdlib.h>
+#include "onames.h"
+#include "artifact_names.h"
 
 char *obj_typename(int);
 char *simple_typename(int);

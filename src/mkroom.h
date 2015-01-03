@@ -2,8 +2,10 @@
 #ifndef MKROOM_H
 #define MKROOM_H
 
-#include "global.h"
+#include "artifact_names.h"
 #include "coord.h"
+#include "global.h"
+#include "onames.h"
 
 /* mkroom.h - types and structures for room and shop initialization */
 

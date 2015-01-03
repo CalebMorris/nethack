@@ -2,7 +2,9 @@
 #define LIGHT_H
 
 #include <stdbool.h>
+#include "artifact_names.h"
 #include "obj.h"
+#include "onames.h"
 
 void new_light_source(signed char, signed char, int, int, void *);
 void del_light_source(int, void *);

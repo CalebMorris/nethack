@@ -2,6 +2,8 @@
 #define O_INIT_H
 
 #include <stdbool.h>
+#include "onames.h"
+#include "artifact_names.h"
 
 void init_objects(void);
 int find_skates(void);

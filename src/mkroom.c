@@ -16,8 +16,6 @@
 #include "invent.h"
 #include "priest.h"
 #include "flag.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "everything.h"
 
 static bool isbig(struct mkroom *);

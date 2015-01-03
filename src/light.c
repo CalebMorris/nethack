@@ -5,8 +5,6 @@
 #include "shk.h"
 #include "vision.h"
 #include "timeout.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "everything.h"
 
 /*

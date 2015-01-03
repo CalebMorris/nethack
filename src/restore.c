@@ -4,8 +4,6 @@
 #include "hack.h"
 #include "lev.h"
 #include "timeout.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "flag.h"
 #include "objnam.h"
 #include "shk.h"

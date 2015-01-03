@@ -5,8 +5,6 @@
 #include "lev.h"        /* save & restore info */
 #include "invent.h"
 #include "objnam.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "flag.h"
 #include "everything.h"
 

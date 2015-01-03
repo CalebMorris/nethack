@@ -4,8 +4,6 @@
 #include "hack.h"
 #include "pm_props.h"
 #include "shk.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "youprop.h"
 #include "flag.h"
 #include "everything.h"

@@ -12,8 +12,6 @@
 #include "polyself.h"
 #include "hack.h"
 #include "pm_props.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "youprop.h"
 #include "flag.h"
 

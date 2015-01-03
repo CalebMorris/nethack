@@ -4,8 +4,6 @@
 #include "mkobj.h"
 #include "write.h"
 #include "hack.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "youprop.h"
 #include "objnam.h"
 #include "shk.h"

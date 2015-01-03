@@ -3,8 +3,6 @@
 #include "role.h"
 #include "hack.h"
 #include "pm_props.h"
-#include "onames.h"
-#include "artifact_names.h"
 #include "flag.h"
 #include "everything.h"
 

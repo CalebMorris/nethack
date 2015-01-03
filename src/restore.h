@@ -2,6 +2,8 @@
 #define RESTORE_H
 
 #include <stdbool.h>
+#include "onames.h"
+#include "artifact_names.h"
 
 void inven_inuse(bool);
 int dorecover(int);
