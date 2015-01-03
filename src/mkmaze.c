@@ -1,22 +1,26 @@
 /* See LICENSE in the root of this project for change info */
 
-#include "mkmaze.h"
-#include "hack.h"
-#include "sp_lev.h"
-#include "lev.h"        /* save & restore info */
+#include "ball.h"
+#include "coord.h"
 #include "dbridge.h"
-#include "display.h"
-#include "end.h"
-#include "mklev.h"
-#include "pline.h"
-#include "teleport.h"
 #include "detect.h"
+#include "display.h"
+#include "ball.h"
+#include "detect.h"
+#include "dungeon.h"
+#include "end.h"
+#include "hack.h"
+#include "lev.h"        /* save & restore info */
+#include "makemon.h"
+#include "mklev.h"
+#include "mkmaze.h"
 #include "mkobj.h"
 #include "mon.h"
-#include "makemon.h"
-#include "ball.h"
-#include "save.h"
+#include "pline.h"
 #include "restore.h"
+#include "save.h"
+#include "sp_lev.h"
+#include "teleport.h"
 
 /* from sp_lev.c, for fixup_special() */
 extern char *lev_message;
