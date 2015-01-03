@@ -33,7 +33,7 @@ extern int nroom;
 extern int nsubroom;
 extern int occtime;
 
-#define WARNCOUNT 6                     /* number of different warning levels */
+static const unsigned WARNCOUNT = 6; /* number of different warning levels */
 extern unsigned char warnsyms[WARNCOUNT];
 
 extern int x_maze_max, y_maze_max;
@@ -128,7 +128,8 @@ extern struct fruit *ffruit;
 
 extern char tune[6];
 
-#define MAXLINFO (MAXDUNGEON * MAXLEVEL)
+static const unsigned MAXLINFO = (MAXDUNGEON * MAXLEVEL);
+
 extern struct linfo level_info[MAXLINFO];
 
 extern struct sinfo {
@@ -156,9 +157,13 @@ extern const char disclosure_options[];
 extern int smeq[];
 extern int doorindex;
 extern char *save_cm;
-#define KILLED_BY_AN     0
-#define KILLED_BY        1
-#define NO_KILLER_PREFIX 2
+
+enum {
+    KILLED_BY_AN,
+    KILLED_BY,
+    NO_KILLER_PREFIX,
+};
+
 extern int killer_format;
 extern const char *killer;
 extern const char *delayed_killer;
@@ -279,17 +284,21 @@ extern struct c_common_strings {
 extern const char *materialnm[];
 
 /* Monster name articles */
-#define ARTICLE_NONE    0
-#define ARTICLE_THE     1
-#define ARTICLE_A       2
-#define ARTICLE_YOUR    3
+enum {
+    ARTICLE_NONE,
+    ARTICLE_THE,
+    ARTICLE_A,
+    ARTICLE_YOUR,
+};
 
 /* Monster name suppress masks */
-#define SUPPRESS_IT             0x01
-#define SUPPRESS_INVISIBLE      0x02
-#define SUPPRESS_HALLUCINATION  0x04
-#define SUPPRESS_SADDLE         0x08
-#define EXACT_NAME              0x0F
+enum {
+    SUPPRESS_IT = 0x01,
+    SUPPRESS_INVISIBLE = 0x02,
+    SUPPRESS_HALLUCINATION = 0x04,
+    SUPPRESS_SADDLE = 0x08,
+    EXACT_NAME = 0x0F,
+};
 
 /* Vision */
 extern bool vision_full_recalc;      /* true if need vision recalc */
@@ -308,16 +317,18 @@ extern const char * const monexplain[], invisexplain[], * const objexplain[], * 
  * provides all the subclasses that seem reasonable, and sets up for all
  * prefixes being null.  Port code can set those that it wants.
  */
-#define HACKPREFIX      0
-#define LEVELPREFIX     1
-#define SAVEPREFIX      2
-#define BONESPREFIX     3
-#define DATAPREFIX      4       /* this one must match hardcoded value in dlb.c */
-#define SCOREPREFIX     5
-#define LOCKPREFIX      6
-#define CONFIGPREFIX    7
-#define TROUBLEPREFIX   8
-#define PREFIX_COUNT    9
+enum {
+    HACKPREFIX,
+    LEVELPREFIX,
+    SAVEPREFIX,
+    BONESPREFIX,
+    DATAPREFIX,/* this one must match hardcoded value in dlb.c */
+    SCOREPREFIX,
+    LOCKPREFIX,
+    CONFIGPREFIX,
+    TROUBLEPREFIX,
+    PREFIX_COUNT,
+};
 
 extern char *fqn_prefix[PREFIX_COUNT];
 extern char *fqn_prefix_names[PREFIX_COUNT];

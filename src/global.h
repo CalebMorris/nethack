@@ -15,19 +15,19 @@
 
 
 /* Files expected to exist in the playground directory. */
-#define RECORD        "run/record" /* file containing list of topscorers */
-#define HELP          "help"    /* file containing command descriptions */
-#define SHELP         "hh"      /* abbreviated form of the same */
-#define RUMORFILE     "rumors"  /* file with fortune cookies */
-#define ORACLEFILE    "oracles" /* file with oracular information */
-#define DATAFILE      "data"    /* file giving the meaning of symbols used */
-#define CMDHELPFILE   "cmdhelp" /* file telling what commands do */
-#define HISTORY       "history" /* file giving nethack's history */
-#define LICENSE       "license" /* file with license information */
-#define OPTIONFILE    "opthelp" /* file explaining runtime options */
-#define OPTIONS_USED  "options" /* compile-time options, for #version */
+static const char* RECORD = "run/record"; /* file containing list of topscorers */
+static const char* HELP = "help" /* file containing command descriptions */
+static const char* SHELP = "hh" /* abbreviated form of the same */
+static const char* RUMORFILE = "rumors" /* file with fortune cookies */
+static const char* ORACLEFILE = "oracles" /* file with oracular information */
+static const char* DATAFILE = "data" /* file giving the meaning of symbols used */
+static const char* CMDHELPFILE = "cmdhelp" /* file telling what commands do */
+static const char* HISTORY = "history" /* file giving nethack's history */
+static const char* LICENSE = "license" /* file with license information */
+static const char* OPTIONFILE = "opthelp" /* file explaining runtime options */
+static const char* OPTIONS_USED = "options" /* compile-time options, for #version */
 
-#define LEV_EXT ".lev"          /* extension for special level files */
+static const char* LEV_EXT = ".lev" /* extension for special level files */
 
 
 #define strcmpi(a,b) strncmpi((a),(b),-1)
@@ -40,14 +40,14 @@
  * particular machine, although it is set to the minimum required maximum
  * signed integer for C (2^15 -1).
  */
-#define LARGEST_INT     32767
+static const int LARGEST_INT = 32767;
 
 /* Used for consistency checks of various data files; */
 struct version_info {
-        unsigned long   incarnation;    /* actual version number */
-        unsigned long   feature_set;    /* bitmask of config settings */
-        unsigned long   entity_count;   /* # of monsters and objects */
-        unsigned long   struct_sizes;   /* size of key structs */
+    unsigned long   incarnation;    /* actual version number */
+    unsigned long   feature_set;    /* bitmask of config settings */
+    unsigned long   entity_count;   /* # of monsters and objects */
+    unsigned long   struct_sizes;   /* size of key structs */
 };
 
 
@@ -60,32 +60,33 @@ struct version_info {
  */
 
 /* size of terminal screen is (at least) (ROWNO+3) by COLNO */
-#define COLNO   80
-#define ROWNO   21
+enum {
+    COLNO = 80,
+    ROWNO = 21,
 
-#define MAXNROFROOMS    40      /* max number of rooms per level */
-#define MAX_SUBROOMS    24      /* max # of subrooms in a given room */
-#define DOORMAX         120     /* max number of doors per level */
+    MAXNROFROOMS = 40, /* max number of rooms per level */
+    MAX_SUBROOMS = 24, /* max # of subrooms in a given room */
+    DOORMAX = 120, /* max number of doors per level */
+    BUFSZ = 256, /* for getlin buffers */
 
-#define BUFSZ           256     /* for getlin buffers */
-#define QBUFSZ          128     /* for building question text */
-#define TBUFSZ          300     /* toplines[] buffer max msg: 3 81char names */
-                                /* plus longest prefix plus a few extra words */
+    QBUFSZ = 128, /* for building question text */
+    TBUFSZ = 300, /* toplines[] buffer max msg: 3 81char names */
+                  /* plus longest prefix plus a few extra words */
 
-#define PL_NSIZ         32      /* name of player, ghost, shopkeeper */
-#define PL_CSIZ         32      /* sizeof pl_character */
-#define PL_FSIZ         32      /* fruit name */
-#define PL_PSIZ         63      /* player-given names for pets, other
-                                 * monsters, objects */
+    PL_NSIZ = 32, /* name of player, ghost, shopkeeper */
+    PL_CSIZ = 32, /* sizeof pl_character */
+    PL_FSIZ = 32, /* fruit name */
+    PL_PSIZ = 63, /* player-given names for pets, other monsters, objects */
 
-#define MAXDUNGEON      16      /* current maximum number of dungeons */
-#define MAXLEVEL        32      /* max number of levels in one dungeon */
-#define MAXSTAIRS       1       /* max # of special stairways in a dungeon */
-#define ALIGNWEIGHT     4       /* generation weight of alignment */
+    MAXDUNGEON = 16, /* current maximum number of dungeons */
+    MAXLEVEL = 32, /* max number of levels in one dungeon */
+    MAXSTAIRS = 1, /* max # of special stairways in a dungeon */
+    ALIGNWEIGHT = 4, /* generation weight of alignment */
 
-#define MAXULEV         30      /* max character experience level */
+    MAXULEV = 30, /* max character experience level */
 
-#define MAXMONNO        120     /* extinct monst after this number created */
-#define MHPMAX          500     /* maximum monster hp */
+    MAXMONNO = 120, /* extinct monst after this number created */
+    MHPMAX = 500, /* maximum monster hp */
+};
 
 #endif /* GLOBAL_H */

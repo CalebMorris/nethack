@@ -96,7 +96,7 @@ static long next_check = 600L;  /* arbitrary first setting */
 static void exerper(void);
 static void postadjabil(long *);
 
-#define AVAL    50              /* tune value for exercise gains */
+static const int AVAL = 50; /* tune value for exercise gains */
 
 /* hunger values - from eat.c */
 enum {

@@ -16,8 +16,7 @@ static const char DOAGAIN = '\001';
  * we should not quit before seeing at least NR_OF_EOFS consecutive EOFs.
  */
 static const int NR_OF_EOFS = 20;
-
-#define CMD_TRAVEL (char)0x90
+static const char CMD_TRAVEL = (char)0x90;
 
 
 static int (*timed_occ_fn)(void);
@@ -125,7 +124,7 @@ static char popch(void);
  * direction), and the input prompt is not shown.  Also, while in_doagain is
  * true, no keystrokes can be saved into the saveq.
  */
-#define BSIZE 20
+static const unsigned BSIZE = 20;
 static char pushq[BSIZE], saveq[BSIZE];
 static int phead, ptail, shead, stail;
 
@@ -216,7 +215,8 @@ doextlist (void)     /* here after #? - now list all full-word commands */
     return 0;
 }
 
-#define MAX_EXT_CMD 40          /* Change if we ever have > 40 ext cmds */
+static const unsigned MAX_EXT_CMD = 40; /* Change if we ever have > 40 ext cmds */
+
 /*
  * This is currently used only by the tty port and is
  * controlled via runtime option 'extmenu'

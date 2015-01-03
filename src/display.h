@@ -249,7 +249,7 @@ enum {
  *
  * The following are offsets used to convert to and from a glyph.
  */
-#define NUM_ZAP 8       /* number of zap beam types */
+static const unsigned NUM_ZAP = 8; /* number of zap beam types */
 
 #define GLYPH_MON_OFF           0
 #define GLYPH_PET_OFF           (NUMMONS        + GLYPH_MON_OFF)

@@ -33,7 +33,7 @@ static bool Mb_hit(struct monst *magr,struct monst *mdef,
    damage by adding it to 2 times the total hit points instead of 1 time.
 Note: this will still break if they have more than about half the number
 of hit points that will fit in a 15 bit integer. */
-#define FATAL_DAMAGE_MODIFIER 200
+static const int FATAL_DAMAGE_MODIFIER = 200;
 
 /* coordinate effects from spec_dbon() with messages in artifact_hit() */
 static int spec_dbon_applies = 0;
@@ -46,15 +46,19 @@ static signed char artidisco[NROFARTIFACTS];
 static void hack_artifacts(void);
 static bool attacks(int,struct obj *);
 
-#define MB_MAX_DIEROLL          8       /* rolls above this aren't magical */
+static const unsigned MB_MAX_DIEROLL = 8; /* rolls above this aren't magical */
+
 static const char * const mb_verb[2][4] = {
     { "probe", "stun", "scare", "cancel" },
     { "prod", "amaze", "tickle", "purge" },
 };
-#define MB_INDEX_PROBE          0
-#define MB_INDEX_STUN           1
-#define MB_INDEX_SCARE          2
-#define MB_INDEX_CANCEL         3
+
+enum {
+    MB_INDEX_PROBE,
+    MB_INDEX_STUN,
+    MB_INDEX_SCARE,
+    MB_INDEX_CANCEL,
+};
 
 static const char recharge_type[] = { ALLOW_COUNT, ALL_CLASSES, 0 };
 static const char invoke_types[] = { ALL_CLASSES, 0 };

@@ -189,7 +189,7 @@ struct entity {
         int ex, ey;
 };
 
-#define ENTITIES 2
+static const unsigned ENTITIES = 2;
 
 static struct entity occupants[ENTITIES];
 

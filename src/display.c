@@ -291,8 +291,8 @@ void map_location (int x, int y, int show) {
     _map_location(x,y,show);
 }
 
-#define DETECTED        2
-#define PHYSICALLY_SEEN 1
+static const int DETECTED = 2;
+static const int PHYSICALLY_SEEN = 1;
 
 static bool is_worm_tail(struct monst *mon, int x, int y) {
     return mon && (x != mon->mx || y != mon->my);
@@ -1690,10 +1690,12 @@ static void set_seenv (
 /* ------------------------------------------------------------------------- */
 
 /* T wall types, one for each row in wall_matrix[][]. */
-#define T_d 0
-#define T_l 1
-#define T_u 2
-#define T_r 3
+enum {
+    T_d,
+    T_l,
+    T_u,
+    T_r,
+};
 
 /*
  * These are the column names of wall_matrix[][].  They are the "results"
@@ -1702,11 +1704,13 @@ static void set_seenv (
  * correct result for the original wall by using different rows for
  * each of the wall types.
  */
-#define T_stone  0
-#define T_tlcorn 1
-#define T_trcorn 2
-#define T_hwall  3
-#define T_tdwall 4
+enum {
+    T_stone,
+    T_tlcorn,
+    T_trcorn,
+    T_hwall,
+    T_tdwall,
+};
 
 static const int wall_matrix[4][5] = {
     { S_stone, S_tlcorn, S_trcorn, S_hwall, S_tdwall }, /* tdwall */
@@ -1717,10 +1721,12 @@ static const int wall_matrix[4][5] = {
 
 
 /* Cross wall types, one for each "solid" quarter.  Rows of cross_matrix[][]. */
-#define C_bl 0
-#define C_tl 1
-#define C_tr 2
-#define C_br 3
+enum {
+    C_bl,
+    C_tl,
+    C_tr,
+    C_br,
+};
 
 /*
  * These are the column names for cross_matrix[][].  They express results
@@ -1729,12 +1735,14 @@ static const int wall_matrix[4][5] = {
  * We pattern match on that, but return the correct result depending
  * on which row we'ere looking at.
  */
-#define C_trcorn 0
-#define C_brcorn 1
-#define C_blcorn 2
-#define C_tlwall 3
-#define C_tuwall 4
-#define C_crwall 5
+enum {
+    C_trcorn,
+    C_brcorn,
+    C_blcorn,
+    C_tlwall,
+    C_tuwall,
+    C_crwall,
+};
 
 static const int cross_matrix[4][6] = {
     { S_brcorn, S_blcorn, S_tlcorn, S_tuwall, S_trwall, S_crwall },

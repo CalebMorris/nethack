@@ -31,7 +31,7 @@ static void bot2(void);
  *      T:123456 Satiated Conf FoodPois Ill Blind Stun Hallu Overloaded
  * -- or somewhat over 130 characters
  */
-#define MAXCO 160
+static const unsigned MAXCO = 160;
 
 static int mrank_sz = 0; /* loaded by max_rank_sz (from u_init) */
 static const char *rank(void);

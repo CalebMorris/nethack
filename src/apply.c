@@ -47,10 +47,8 @@ static const char no_elbow_room[] = "don't have enough elbow-room to maneuver.";
 static const char hollow_str[] = "a hollow sound.  This must be a secret %s!";
 static const char whistle_str[] = "produce a %s whistling sound.";
 
-#define MAXLEASHED      2
-
-
-#define WEAK    3       /* from eat.c */
+static const int MAXLEASHED = 2;
+static const unsigned WEAK = 3; /* from eat.c */
 
 static const char look_str[] = "look %s.";
 static const char cuddly[] = { TOOL_CLASS, GEM_CLASS, 0 };
@@ -72,8 +70,10 @@ not_enough_room[] = "There's not enough room here to use that.",
 
 #define BY_OBJECT       ((struct monst *)0)
 
-#define PROP_COUNT 6            /* number of properties we're dealing with */
-#define ATTR_COUNT (A_MAX*3)    /* number of attribute points we might fix */
+enum {
+    PROP_COUNT = 6, /* number of properties we're dealing with */
+    ATTR_COUNT = (A_MAX*3), /* number of attribute points we might fix */
+}
 
 #define prop2trbl(X)    ((X) + A_MAX)
 

@@ -80,10 +80,11 @@ void ballfall (void) {
  */
 
 /* values for u.bc_order */
-#define BCPOS_DIFFER    0       /* ball & chain at different positions */
-#define BCPOS_CHAIN     1       /* chain on top of ball */
-#define BCPOS_BALL      2       /* ball on top of chain */
-
+enum {
+    BCPOS_DIFFER, /* ball & chain at different positions */
+    BCPOS_CHAIN, /* chain on top of ball */
+    BCPOS_BALL, /* ball on top of chain */
+};
 
 
 /*
